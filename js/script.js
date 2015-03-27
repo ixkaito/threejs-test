@@ -11,12 +11,14 @@
   // var material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
   var material = new THREE.MeshLambertMaterial({ color: 0xff0000 });
   var cube = new THREE.Mesh(geometry, material);
-  cube.position.set(0, 25, 0); // rotate, scale
+  cube.castShadow = true;
+  cube.position.set(0, 50, 0); // rotate, scale
   scene.add(cube);
 
   var pGeometry = new THREE.PlaneGeometry(300, 300);
   var pMaterial = new THREE.MeshLambertMaterial({ color: 0x0096d6, side: THREE.DoubleSide });
   var plane = new THREE.Mesh(pGeometry, pMaterial);
+  plane.receiveShadow = true;
   plane.position.set(0, 0, 0);
   plane.rotation.x = 90 * Math.PI / 180;
   scene.add(plane);
@@ -24,6 +26,7 @@
   // light
   var light = new THREE.DirectionalLight(0xffffff, 1);
   light.position.set(0, 100, 30);
+  light.castShadow = true;
   scene.add(light);
   var ambient = new THREE.AmbientLight(0x550000);
   scene.add(ambient);
@@ -45,6 +48,7 @@
   var renderer = new THREE.WebGLRenderer();
   renderer.setSize(width, height);
   renderer.setClearColor(0xeeeeee, 1);
+  renderer.shadowMapEnabled = true;
   document.getElementById('stage').appendChild(renderer.domElement);
   renderer.render(scene, camera);
 
