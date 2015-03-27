@@ -18,6 +18,7 @@
   var pMaterial = new THREE.MeshLambertMaterial({ color: 0x0096d6, side: THREE.DoubleSide });
   var plane = new THREE.Mesh(pGeometry, pMaterial);
   plane.position.set(0, 0, 0);
+  plane.rotation.x = 90 * Math.PI / 180;
   scene.add(plane);
 
   // light
