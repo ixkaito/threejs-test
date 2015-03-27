@@ -8,7 +8,8 @@
 
   // mesh
   var geometry = new THREE.BoxGeometry(50, 50, 50);
-  var material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+  // var material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+  var material = new THREE.MeshLambertMaterial({ color: 0xff0000 });
   var cube = new THREE.Mesh(geometry, material);
   cube.position.set(0, 0, 0); // rotate, scale
   scene.add(cube);
