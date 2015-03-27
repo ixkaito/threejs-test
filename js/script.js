@@ -18,6 +18,8 @@
   var light = new THREE.DirectionalLight(0xffffff, 1);
   light.position.set(0, 100, 30);
   scene.add(light);
+  var ambient = new THREE.AmbientLight(0x550000);
+  scene.add(ambient);
 
   // camera
   var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
