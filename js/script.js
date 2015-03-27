@@ -11,7 +11,7 @@
   // var material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
   var material = new THREE.MeshLambertMaterial({ color: 0xff0000 });
   var cube = new THREE.Mesh(geometry, material);
-  cube.position.set(0, 0, 0); // rotate, scale
+  cube.position.set(0, 25, 0); // rotate, scale
   scene.add(cube);
 
   var pGeometry = new THREE.PlaneGeometry(300, 300);
