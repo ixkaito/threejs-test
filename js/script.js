@@ -33,7 +33,7 @@
   // camera.position.set(0, 0, 0);
   // camera.position.x = 0;
   // camera.position = new THREE.Vector3(0, 0, 0);
-  camera.position.set(200, 100, 500);
+  camera.position.set(200, 300, 500);
   camera.lookAt(cube.position);
 
   // helper
