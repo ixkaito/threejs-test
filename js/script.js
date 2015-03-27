@@ -50,6 +50,16 @@
   renderer.setClearColor(0xeeeeee, 1);
   renderer.shadowMapEnabled = true;
   document.getElementById('stage').appendChild(renderer.domElement);
-  renderer.render(scene, camera);
+
+  function render() {
+    requestAnimationFrame(render);
+    cube.rotation.x += 1 * Math.PI / 180;
+    cube.rotation.y += 1 * Math.PI / 180;
+    cube.rotation.z += 1 * Math.PI / 180;
+    cube.position.x = Math.sin(new Date().getTime() / 200) * 100;
+    cube.position.z = Math.cos(new Date().getTime() / 200) * 100;
+    renderer.render(scene, camera);
+  }
+  render();
 
 })();
