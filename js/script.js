@@ -14,11 +14,11 @@
   cube.position.set(0, 0, 0); // rotate, scale
   scene.add(cube);
 
-  var sGeometry = new THREE.SphereGeometry(30);
-  var sMaterial = new THREE.MeshLambertMaterial({ color: 0x121212 });
-  var sphere = new THREE.Mesh(sGeometry, sMaterial);
-  sphere.position.set(100, 100, 100);
-  scene.add(sphere);
+  var pGeometry = new THREE.PlaneGeometry(300, 300);
+  var pMaterial = new THREE.MeshLambertMaterial({ color: 0x0096d6, side: THREE.DoubleSide });
+  var plane = new THREE.Mesh(pGeometry, pMaterial);
+  plane.position.set(0, 0, 0);
+  scene.add(plane);
 
   // light
   var light = new THREE.DirectionalLight(0xffffff, 1);
